@@ -1,0 +1,28 @@
+html{box-sizing: border-box; /* font-family: IF APPLICABLE;*/ }
+*, *::before, *::after {box-sizing:inherit;}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  border: solid black; 
+  text-align: center;
+  margin: 10px;
+}
+
+.material-icons {
+  color: red;
+  font-size: 100px;
+  line-height: 2;
+}
+
+.fas{
+  font-size: 100px;
+  color: green;
+  line-height: 2;
+}
