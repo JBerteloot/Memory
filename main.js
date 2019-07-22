@@ -6,7 +6,7 @@ deck.populate(cards)
 
 var numOfFlippedCards = 0;
 var firstCardFlippedValue = -1;
-var turns = 20;
+var turns = 18;
 var flippedCards = 0;
 
 $('#newGame').on('click', function(e) {
@@ -19,19 +19,20 @@ $('.card').on('click', function(e) {
   $(this).find('.card-front').show();
   if (numOfFlippedCards == 0) {
     numOfFlippedCards++;
-    firstCardFlippedValue = $(this).attr('value');
+    firstCardFlippedValue = $(this).attr('value')
   } else {
     if (firstCardFlippedValue == $(this).attr('value')) {
       // you made it
-      // disable cards TODO
       // increment flippedCards variable
       flippedCards += 2;
+      
       setTimeout(function(e){
         if (flippedCards == deck.pile.length) {
           $('.game').hide();
           $('.youWin').show();
         };
       },1000)
+      
     } else {
       // try again
       var currentCard = $(this);
@@ -40,13 +41,14 @@ $('.card').on('click', function(e) {
         currentCard.find('.card-back').show();
         currentCard.find('.card-front').hide();
         // hide the previous card
-        console.log($('.card-'+firstCardFlippedValue));
         $('.card-'+firstCardFlippedValue).find('.card-back').show();
         $('.card-'+firstCardFlippedValue).find('.card-front').hide();
       }, 1000);
     }
-    turns--;
+    turns = turns - 1;
+    console.log(turns);
     numOfFlippedCards = 0;
+    document.getElementById('turn').innerHTML = turns
   }
 
   setTimeout(function (e) {
@@ -55,4 +57,5 @@ $('.card').on('click', function(e) {
       $('.gameOver').show();
     }
   },1000);
+  document.getElementById('turn').innerHTML = turns
 });

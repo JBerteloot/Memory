@@ -1,1 +1,0 @@
-// var icon = ["case", "plane", "train", "car", "map", "boat", "walk", "bike", "moto"]

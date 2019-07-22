@@ -12,31 +12,31 @@
 <body>
   <div id="container">
     <div class="welcome">
+      <img src="back.jpeg"/>
+      <h1>Welcome to My Travel Theme Memory Game</h1>
       <button id="newGame">New Game</button>
     </div>
     <div class="gameOver">
-      Game Over
+       <span class="blinking-">Game Over</span>
     </div>
     <div class="youWin">
-      You Win!!!
+      <span class="blinking">You Win!!!</span>
     </div>
     <div class="game">
+      <div class="lives">
+        <h6>Lives:  </h6>
+        <div id='turn'></div>
+      </div>
       <div class="cards">
+        
         <!-- 
-        <div class="card"><i class="fas fa-${this.icn}"></i></div> 
-        -->
-          
-          <!--
-        <div class=flip-card>
-          <div class="flip-card-inner">
-            <div class="flip-card-front"></div>
-            <div class="flip-card-back">
-              <i class="fas fa-${this.icn}"></i> 
-            </div>
+        <div class="card card-${this.val}" value="${this.val}">
+          <div class="card-back">
+            <img src="back.jpeg"/>
           </div>
+          <div class="card-front"><i class="fas fa-${this.icn}"></i></div>
         </div> 
         -->
-
         <!-- 
         <i id="case" class="material-icons md-48">card_travel</i>
         <i id="plane" class="material-icons md-48">flight</i>
@@ -69,10 +69,6 @@ integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=""
 crossorigin="anonymous"></script>
 <script src="card.js"></script>
 <script src="deck.js"></script>
-<script src="game.js"></script>
-<script src="icons.js"></script>
-<script src="colors.js"></script>
 <script src="main.js"></script>
-<!-- <script src="mikes.js"></script> -->
-</body>
+  </body>
 </html>
